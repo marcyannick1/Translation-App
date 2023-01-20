@@ -1,5 +1,9 @@
-import { Flex, Icon, Input } from "@chakra-ui/react";
-import { BiChevronDown, BiChevronUp } from "react-icons/bi";
+import {
+    Flex,
+    Icon,
+    Input
+} from "@chakra-ui/react";
+import { BiChevronDown, BiChevronUp} from "react-icons/bi";
 import { Language } from "../App";
 
 interface SelectLanguageProps {
@@ -25,9 +29,9 @@ function SelectLanguage({
         >
             <Input value={language.name} variant="unstyled" cursor="pointer" />
             {showModal != type ? (
-                <Icon as={BiChevronDown} />
+                <Icon as={BiChevronDown} fontSize={25} />
             ) : (
-                <Icon as={BiChevronUp} />
+                <Icon as={BiChevronUp} fontSize={25} />
             )}
         </Flex>
     );
