@@ -2,11 +2,11 @@ import { Button, Flex, Icon, Text, useColorMode } from "@chakra-ui/react";
 import * as Md from "react-icons/md";
 
 function Navbar() {
-    const {colorMode, toggleColorMode} = useColorMode()
+    const { colorMode, toggleColorMode } = useColorMode();
 
     return (
         <Flex p={5} alignItems="center">
-            <Icon as={Md.MdTranslate} fontSize={25}/>
+            <Icon as={Md.MdTranslate} fontSize={25} />
             <Text fontWeight="medium" fontSize="1.2em" ml={2}>
                 Translate
             </Text>
