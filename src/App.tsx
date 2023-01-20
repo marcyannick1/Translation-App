@@ -34,7 +34,7 @@ function App() {
             params: { target: "fr" },
             headers: {
                 "Accept-Encoding": "application/gzip",
-                "X-RapidAPI-Key": "",
+                "X-RapidAPI-Key": import.meta.env.VITE_RAPIDAPI_KEY,
                 "X-RapidAPI-Host": "google-translate1.p.rapidapi.com",
             },
         };
@@ -102,7 +102,7 @@ function App() {
                 "content-type": "application/x-www-form-urlencoded",
                 "Accept-Encoding": "application/gzip",
                 "X-RapidAPI-Key":
-                    "",
+                    import.meta.env.VITE_RAPIDAPI_KEY,
                 "X-RapidAPI-Host": "google-translate1.p.rapidapi.com",
             },
             data: encodedParams,
