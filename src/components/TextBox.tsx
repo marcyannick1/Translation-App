@@ -26,6 +26,7 @@ function TextBox({
                 pr={10}
                 onChange = {(e) => setInputText?.(e.target.value)}
                 value = {type == "Input" ? inputText : outputText}
+                variant = "filled"
             />
             {inputText && 
                 <IoMdClose size={20} style={{position: "absolute", top: 10, right: 10, zIndex: 1000, cursor: "pointer"}} onClick={()=>setInputText?.('')}/>

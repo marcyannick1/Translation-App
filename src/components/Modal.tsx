@@ -5,6 +5,7 @@ import {
     InputLeftElement,
     ListItem,
     UnorderedList,
+    useColorModeValue,
 } from "@chakra-ui/react";
 import { ChangeEvent } from "react";
 import { BiSearch } from "react-icons/bi";
@@ -25,6 +26,8 @@ function Modal({
     handleClick,
     selectedLanguage,
 }: ModalProps) {
+    const selectedLangColor = useColorModeValue('gray.100', 'gray.700')
+
     return (
         <Box rounded={5}>
             <InputGroup>
@@ -47,9 +50,9 @@ function Modal({
                         rounded={4}
                         padding={1}
                         bgColor={
-                            language.name === selectedLanguage ? "gray.100" : ""
+                            language.name === selectedLanguage ? selectedLangColor : ""
                         }
-                        _hover={{ bgColor: "gray.100" }}
+                        _hover={{ bgColor: selectedLangColor }}
                         onClick={handleClick}
                     >
                         {language.name}
