@@ -81,11 +81,24 @@ function App() {
     };
 
     const changeLanguage = (type: string, language: string) => {
-        const key = languages.filter((lang) => lang.name.includes(language))[0]
-            .language;
-        type === "Input"
-            ? setInputLanguage({ language: key, name: language })
-            : setOutputLanguage({ language: key, name: language });
+        const key = languages.filter((lang) => lang.name.includes(language))[0].language;
+
+        if (type === "Input"){
+            if(outputLanguage.language == key && outputLanguage.name == language){
+                setOutputLanguage(inputLanguage)
+                setInputLanguage({ language: key, name: language })
+            }else{
+                setInputLanguage({ language: key, name: language })
+            }
+        }else{
+            if(inputLanguage.language == key && inputLanguage.name == language){
+                setInputLanguage(outputLanguage)
+                setOutputLanguage({ language: key, name: language })
+            }else{
+                setOutputLanguage({ language: key, name: language })
+            }
+        }
+
         setShowModal(null);
     };
 
